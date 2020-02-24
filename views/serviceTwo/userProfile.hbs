@@ -1,0 +1,16 @@
+<div class="issue-show-page">
+    <h2>{{ hair.name }} Makeup Profile</h2>
+    <p>{{ hair.phoneNum }}</p>
+    <p>{{ hair.email }}</p>
+    <p>{{ hair.apptDate }}</p>
+    <p>{{ hair.notes }}</p>
+    <p>{{ hair.hairType }}</p>
+
+    <a href="/hair/{{ hair.id }}/edit">Edit Client Profile</a>
+
+    <a href="/hair">Back to Dashboard</a>
+
+    <form method="POST" action="/hair/{{ hair.id }}?_method=DELETE">
+        <input type="submit" value="Delete Client Profile"/>
+    </form>
+</div>

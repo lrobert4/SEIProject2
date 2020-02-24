@@ -37,8 +37,8 @@ hairRouter.get('/new', (req, res) => {
 });
 
 hairRouter.get('/:hairId', (req, res) => {
-    Hair.findById(req.params.issueId).then(hair => {
-        res.render('issues/service', { hair });
+    Hair.findById(req.params.hairId).then(hair => {
+        res.render('serviceTwo/userProfile', { hair });
     });
 });
 
