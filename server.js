@@ -19,6 +19,10 @@ const methodOverride = require('method-override')
  */
 const issueRouter = require('./controllers/issue.js')
 
+const hairRouter = require('./controllers/serviceTwo.js')
+
+
+
 
 /* Step 3
  *
@@ -62,6 +66,7 @@ app.set('view engine', 'hbs')
  * the paths defined in the router.
  */
 app.use('/issues', issueRouter)
+app.use('/hair', hairRouter)
 
 /* Step 5
  *
