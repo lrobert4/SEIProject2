@@ -31,7 +31,7 @@ const serviceTwo = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-    conversation: {
+    notes: {
         type: String,
         default: 'open',
     },
