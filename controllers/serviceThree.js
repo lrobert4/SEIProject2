@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const TemplateModel = require('../models/template.js')
+const Hair = require('../models/serviceTwo.js')
 
 /* Step 3 
  * 
@@ -25,24 +25,56 @@ const TemplateModel = require('../models/template.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const templateRouter = express.Router()
+const hairRouter = express.Router()
 
 /* Step 4
  * 
  * TODO: Put all request handlers here
  */
 
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-templateRouter.get('/', (req, res) => {
-  res.send('hello, world');
-})
+issueRouter.get('/new', (req, res) => {
+    res.render('serviceTwo/newServiceForm');
+});
+
+issueRouter.get('/:issueId', (req, res) => {
+    Issue.findById(req.params.issueId).then(issue => {
+        res.render('issues/service', { issue });
+    });
+});
+
+issueRouter.get('/', (req, res) => {
+    Issue.find().then(issues => {
+        res.render('issues/services', { issues });
+    });
+});
+
+issueRouter.get('/:issueId/edit', (req, res) => {
+    Issue.findById(req.params.issueId).then(issue => {
+        res.render('serviceTwo/editServiceForm', { issue });
+    });
+});
+
+issueRouter.post('/', (req, res) => {
+    Issue.create(req.body).then(() => {
+        res.redirect('/issues');
+    });
+});
+
+issueRouter.put('/:issueId', (req, res) => {
+    Issue.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
+        res.redirect('/issues');
+    });
+});
+
+issueRouter.delete('/:issueId', (req, res) => {
+    Issue.findByIdAndDelete(req.params.issueId).then(() => {
+        res.redirect('/issues');
+    });
+});
 
 /* Step 6
  *
  * Export the router from the file.
  *
  */
-module.exports = templateRouter;
+module.exports = hairRouter;

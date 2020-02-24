@@ -32,42 +32,42 @@ const hairRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
-issueRouter.get('/new', (req, res) => {
+hairRouter.get('/new', (req, res) => {
     res.render('serviceTwo/newServiceForm');
 });
 
-issueRouter.get('/:issueId', (req, res) => {
-    Issue.findById(req.params.issueId).then(issue => {
+hairRouter.get('/:issueId', (req, res) => {
+    Hair.findById(req.params.issueId).then(issue => {
         res.render('issues/service', { issue });
     });
 });
 
-issueRouter.get('/', (req, res) => {
-    Issue.find().then(issues => {
+hairRouter.get('/', (req, res) => {
+    Hair.find().then(issues => {
         res.render('issues/services', { issues });
     });
 });
 
-issueRouter.get('/:issueId/edit', (req, res) => {
-    Issue.findById(req.params.issueId).then(issue => {
+hairRouter.get('/:issueId/edit', (req, res) => {
+    Hair.findById(req.params.issueId).then(issue => {
         res.render('serviceTwo/editServiceForm', { issue });
     });
 });
 
-issueRouter.post('/', (req, res) => {
-    Issue.create(req.body).then(() => {
+hairRouter.post('/', (req, res) => {
+    Hair.create(req.body).then(() => {
         res.redirect('/issues');
     });
 });
 
-issueRouter.put('/:issueId', (req, res) => {
-    Issue.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
+hairRouter.put('/:issueId', (req, res) => {
+    Hair.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
         res.redirect('/issues');
     });
 });
 
-issueRouter.delete('/:issueId', (req, res) => {
-    Issue.findByIdAndDelete(req.params.issueId).then(() => {
+hairRouter.delete('/:issueId', (req, res) => {
+    Hair.findByIdAndDelete(req.params.issueId).then(() => {
         res.redirect('/issues');
     });
 });
