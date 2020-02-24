@@ -32,7 +32,7 @@ const nailsRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
-nailsRouter.get('/newnails', (req, res) => {
+nailsRouter.get('/new', (req, res) => {
     res.render('serviceThree/newServiceForm');
 });
 

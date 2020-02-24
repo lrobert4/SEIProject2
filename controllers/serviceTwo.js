@@ -36,21 +36,21 @@ hairRouter.get('/new', (req, res) => {
     res.render('serviceTwo/newServiceForm');
 });
 
-hairRouter.get('/:issueId', (req, res) => {
-    Hair.findById(req.params.issueId).then(issue => {
-        res.render('issues/service', { issue });
+hairRouter.get('/:hairId', (req, res) => {
+    Hair.findById(req.params.issueId).then(hair => {
+        res.render('issues/service', { hair });
     });
 });
 
 hairRouter.get('/', (req, res) => {
-    Hair.find().then(issues => {
-        res.render('issues/services', { issues });
+    Hair.find().then(hairs => {
+        res.render('issues/services', { hairs });
     });
 });
 
-hairRouter.get('/:issueId/edit', (req, res) => {
-    Hair.findById(req.params.issueId).then(issue => {
-        res.render('serviceTwo/editServiceForm', { issue });
+hairRouter.get('/:hairId/edit', (req, res) => {
+    Hair.findById(req.params.hairId).then(hair => {
+        res.render('serviceTwo/editServiceForm', { hair });
     });
 });
 
@@ -60,15 +60,15 @@ hairRouter.post('/', (req, res) => {
     });
 });
 
-hairRouter.put('/:issueId', (req, res) => {
-    Hair.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
-        res.redirect('/issues');
+hairRouter.put('/:hairId', (req, res) => {
+    Hair.findByIdAndUpdate(req.params.hairId, req. body).then(hair => {
+        res.redirect('/hair');
     });
 });
 
-hairRouter.delete('/:issueId', (req, res) => {
-    Hair.findByIdAndDelete(req.params.issueId).then(() => {
-        res.redirect('/issues');
+hairRouter.delete('/:hairId', (req, res) => {
+    Hair.findByIdAndDelete(req.params.hairId).then(() => {
+        res.redirect('/hair');
     });
 });
 
