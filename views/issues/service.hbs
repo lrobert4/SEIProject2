@@ -1,6 +1,5 @@
 <div class="issue-show-page">
-    <h2>Current issue</h2>
-    <p>{{ issue.name }}</p>
+    <h2>{{ issue.name }} Makeup Profile</h2>
     <p>{{ issue.phoneNum }}</p>
     <p>{{ issue.email }}</p>
     <p>{{ issue.apptDate }}</p>
@@ -8,6 +7,8 @@
     <p>{{ issue.skinType }}</p>
 
     <a href="/issues/{{ issue.id }}/edit">Edit Client Profile</a>
+
+    <a href="/issues">Back to Dashboard</a>
 
     <form method="POST" action="/issues/{{ issue.id }}?_method=DELETE">
         <input type="submit" value="Delete Client Profile"/>
