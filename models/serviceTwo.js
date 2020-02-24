@@ -14,23 +14,31 @@ const mongoose = require('../db/connection.js')
  * TODO: create model schema 
  *
  */
-const Issue = new mongoose.Schema({
-    description: {
+const serviceTwo = new mongoose.Schema({
+    name: {
         type: String,
         required: true,
     },
-    createdAt: {
+    phoneNum: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    apptDate: {
         type: Date,
         default: Date.now,
     },
-    status: {
+    conversation: {
         type: String,
         default: 'open',
     },
-    priority: {
+    hairType: {
         type: String,
         required: true,
-        enum: ['High', 'Medium', 'Low'],
+        enum: ['Straight', 'Mixed Chick', 'Afro-Textured'],
     },
 })
 
@@ -38,4 +46,4 @@ const Issue = new mongoose.Schema({
  *
  * TODO: export the schema
  */
-module.exports = mongoose.model('Issue', Issue);
+module.exports = mongoose.model('serviceTwo', serviceTwo);
