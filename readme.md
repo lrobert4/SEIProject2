@@ -5,5 +5,5 @@ An app that will serve as a client relationship management tool for a full servi
 ## User Story
 Beauty professionals have the challenge of nuturing realtionships as well as consistently delivering quality styles that meet their clients expectations. 
 
-Clients who extend their loyalty to a beauty professional expect the same quality service they were impressed with.
+Clients who extend their loyalty to a beauty professional expect the same quality service they were impressed with, when they initially worked with them.
 
