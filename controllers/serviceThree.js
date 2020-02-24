@@ -33,7 +33,7 @@ const nailsRouter = express.Router()
  */
 
 nailsRouter.get('/new', (req, res) => {
-    res.render('serviceTwo/newServiceForm');
+    res.render('serviceThree/newServiceForm');
 });
 
 nailsRouter.get('/:issueId', (req, res) => {
@@ -50,7 +50,7 @@ nailsRouter.get('/', (req, res) => {
 
 nailsRouter.get('/:issueId/edit', (req, res) => {
   Nails.findById(req.params.issueId).then(issue => {
-        res.render('serviceTwo/editServiceForm', { issue });
+        res.render('serviceThree/editServiceForm', { issue });
     });
 });
 
