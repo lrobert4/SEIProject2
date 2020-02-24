@@ -1,0 +1,12 @@
+<form method="POST" action="/issues/{{ issue.id }}?_method=PUT">
+
+  <!--
+    Template for creating input form for a string object key called stringMember
+    NOTE: for numeric input fields use `type="number"`
+  --->
+    <input type="text" value="{{ issue.description }}" placeholder="Name" name="description"/>
+    <input type="text" value="{{ issue.status }}" placeholder="Status" name="status"/>
+    <input type="text" value="{{ issue.priority }}" placeholder="Priority" name="priority"/>
+
+    <input type="submit" value="Update Issue"/>
+</form>

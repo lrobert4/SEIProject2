@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+}
+
+.issue-show-page {
+    color: blue;
+}
+
+.parent {
+
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 200px 200px 200px;
+    
+}
