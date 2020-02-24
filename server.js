@@ -66,7 +66,7 @@ app.set('view engine', 'hbs')
  */
 app.use('/issues', makeupRouter)
 app.use('/hair', hairRouter)
-app.use('/nails', hairRouter)
+app.use('/nails', nailsRouter)
 
 /* Step 5
  *
