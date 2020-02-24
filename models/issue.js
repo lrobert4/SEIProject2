@@ -15,22 +15,30 @@ const mongoose = require('../db/connection.js')
  *
  */
 const Issue = new mongoose.Schema({
-    description: {
+    name: {
         type: String,
         required: true,
     },
-    createdAt: {
+    phoneNum: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    apptDate: {
         type: Date,
         default: Date.now,
     },
-    status: {
+    notes: {
         type: String,
         default: 'open',
     },
-    priority: {
+    skinType: {
         type: String,
         required: true,
-        enum: ['High', 'Medium', 'Low'],
+        enum: ['Dry', 'Oily', 'Normal', 'Combination', 'Mature', 'Sensitive'],
     },
 })
 
