@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const Issue = require('../models/issue.js')
+const Makeup = require('../models/issue.js')
 
 /* Step 3 
  * 
@@ -25,49 +25,49 @@ const Issue = require('../models/issue.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const issueRouter = express.Router()
+const makeupRouter = express.Router()
 
 /* Step 4
  * 
  * TODO: Put all request handlers here
  */
 
-issueRouter.get('/new', (req, res) => {
+makeupRouter.get('/new', (req, res) => {
     res.render('issues/newServiceForm');
 });
 
-issueRouter.get('/:issueId', (req, res) => {
-    Issue.findById(req.params.issueId).then(issue => {
+makeupRouter.get('/:issueId', (req, res) => {
+    Makeup.findById(req.params.issueId).then(issue => {
         res.render('issues/service', { issue });
     });
 });
 
-issueRouter.get('/', (req, res) => {
-    Issue.find().then(issues => {
+makeupRouter.get('/', (req, res) => {
+    Makeup.find().then(issues => {
         res.render('issues/services', { issues });
     });
 });
 
-issueRouter.get('/:issueId/edit', (req, res) => {
-    Issue.findById(req.params.issueId).then(issue => {
+makeupRouter.get('/:issueId/edit', (req, res) => {
+    Makeup.findById(req.params.issueId).then(issue => {
         res.render('issues/editServiceForm', { issue });
     });
 });
 
-issueRouter.post('/', (req, res) => {
-    Issue.create(req.body).then(() => {
+makeupRouter.post('/', (req, res) => {
+    Makeup.create(req.body).then(() => {
         res.redirect('/issues');
     });
 });
 
-issueRouter.put('/:issueId', (req, res) => {
-    Issue.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
+makeupRouter.put('/:issueId', (req, res) => {
+    Makeup.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
         res.redirect('/issues');
     });
 });
 
-issueRouter.delete('/:issueId', (req, res) => {
-    Issue.findByIdAndDelete(req.params.issueId).then(() => {
+makeupRouter.delete('/:issueId', (req, res) => {
+    Makeup.findByIdAndDelete(req.params.issueId).then(() => {
         res.redirect('/issues');
     });
 });
@@ -77,4 +77,4 @@ issueRouter.delete('/:issueId', (req, res) => {
  * Export the router from the file.
  *
  */
-module.exports = issueRouter;
+module.exports = makeupRouter;

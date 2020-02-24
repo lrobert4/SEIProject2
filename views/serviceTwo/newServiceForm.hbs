@@ -1,16 +1,18 @@
-<form method="POST" action="/issues">
+<form method="POST" action="/hair">
 
   <!--
     Template for creating input form for a string object key called stringMember
     NOTE: for numeric input fields use `type="number"`
   --->
-    <input type="text" placeholder="Name" name="description"/>
-    <input type="text" placeholder="Status" name="status"/>
-    <select name="priority">
-        <option value="High">High</option>
-        <option value="Medium">Medium</option>
-        <option value="Low">Low</option>
+    <input type="text" placeholder="Name" name="name"/><br/>
+    <input type="text" placeholder="Phone Number" name="phoneNum"/><br/>
+    <input type="text" placeholder="Email Address" name="email"/><br/>
+    <input type="date" placeholder="Appointment Date" name="apptDate"/><br/>
+    <select name="hairType">
+        <option value="Straight">Straight</option>
+        <option value="Curly">Mixed Chick</option>
+        <option value="Afro-Textured">Afro-Textured</option>
     </select>
 
-    <input type="submit" value="Create Issue"/>
+    <input type="submit" value="Create Hair Client"/>
 </form>

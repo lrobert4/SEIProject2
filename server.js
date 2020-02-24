@@ -17,7 +17,7 @@ const methodOverride = require('method-override')
  * import routers from controllers/
  *
  */
-const issueRouter = require('./controllers/issue.js')
+const makeupRouter = require('./controllers/issue.js')
 const hairRouter = require('./controllers/serviceTwo.js')
 const nailsRouter = require('./controllers/serviceThree.js')
 
@@ -64,7 +64,7 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/issues', issueRouter)
+app.use('/issues', makeupRouter)
 app.use('/hair', hairRouter)
 app.use('/nails', hairRouter)
 

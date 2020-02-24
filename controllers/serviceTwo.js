@@ -56,7 +56,7 @@ hairRouter.get('/:issueId/edit', (req, res) => {
 
 hairRouter.post('/', (req, res) => {
     Hair.create(req.body).then(() => {
-        res.redirect('/issues');
+        res.redirect('/hair');
     });
 });
 
