@@ -1,0 +1,16 @@
+<form method="POST" action="/issues">
+
+  <!--
+    Template for creating input form for a string object key called stringMember
+    NOTE: for numeric input fields use `type="number"`
+  --->
+    <input type="text" placeholder="Name" name="description"/>
+    <input type="text" placeholder="Status" name="status"/>
+    <select name="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+
+    <input type="submit" value="Create Issue"/>
+</form>
