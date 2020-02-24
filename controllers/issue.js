@@ -33,24 +33,24 @@ const issueRouter = express.Router()
  */
 
 issueRouter.get('/new', (req, res) => {
-    res.render('issues/newIssueForm');
+    res.render('issues/newServiceForm');
 });
 
 issueRouter.get('/:issueId', (req, res) => {
     Issue.findById(req.params.issueId).then(issue => {
-        res.render('issues/issue', { issue });
+        res.render('issues/service', { issue });
     });
 });
 
 issueRouter.get('/', (req, res) => {
     Issue.find().then(issues => {
-        res.render('issues/issues', { issues });
+        res.render('issues/services', { issues });
     });
 });
 
 issueRouter.get('/:issueId/edit', (req, res) => {
     Issue.findById(req.params.issueId).then(issue => {
-        res.render('issues/editIssueForm', { issue });
+        res.render('issues/editServiceForm', { issue });
     });
 });
 
