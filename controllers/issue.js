@@ -46,7 +46,7 @@ makeupRouter.get('/:issueId', (req, res) => {
 //
 makeupRouter.get('/', (req, res) => {
     Makeup.find().then(issues => {
-        res.render('homepage/index', { issues });
+        res.render('issues/services', { issues });
     });
 });
 
@@ -58,19 +58,19 @@ makeupRouter.get('/:issueId/edit', (req, res) => {
 
 makeupRouter.post('/', (req, res) => {
     Makeup.create(req.body).then(() => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
 
 makeupRouter.put('/:issueId', (req, res) => {
     Makeup.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
 
 makeupRouter.delete('/:issueId', (req, res) => {
     Makeup.findByIdAndDelete(req.params.issueId).then(() => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
 

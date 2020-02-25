@@ -44,7 +44,7 @@ hairRouter.get('/:hairId', (req, res) => {
 
 hairRouter.get('/', (req, res) => {
     Hair.find().then(hairs => {
-        res.render('issues/services', { hairs });
+        res.render('serviceTwo/clientList', { hairs });
     });
 });
 
@@ -56,19 +56,19 @@ hairRouter.get('/:hairId/edit', (req, res) => {
 
 hairRouter.post('/', (req, res) => {
     Hair.create(req.body).then(() => {
-        res.redirect('/hair');
+        res.redirect('/hairs');
     });
 });
 
 hairRouter.put('/:hairId', (req, res) => {
     Hair.findByIdAndUpdate(req.params.hairId, req. body).then(hair => {
-        res.redirect('/hair');
+        res.redirect('/hairs');
     });
 });
 
-hairRouter.delete('/:hairId', (req, res) => {
+hairRouter.delete('/:hairsId', (req, res) => {
     Hair.findByIdAndDelete(req.params.hairId).then(() => {
-        res.redirect('/hair');
+        res.redirect('/hairs');
     });
 });
 
