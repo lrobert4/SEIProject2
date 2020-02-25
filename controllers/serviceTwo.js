@@ -61,7 +61,6 @@ hairRouter.post('/', (req, res) => {
 });
 
 hairRouter.put('/:hairId', (req, res) => {
-    console.log("I'm Here!")
     Hair.findByIdAndUpdate(req.params.hairId, req. body).then(hair => {
         res.redirect('/hairs');
     });

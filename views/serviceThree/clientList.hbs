@@ -1,0 +1,15 @@
+<section class="parent">
+    <div class="service-one">
+
+        <h1>Nail Client Profiles</h1>
+        <ul>
+        {{#each nails }}
+            <li><a href="/nails/{{ id }}">{{ name }} {{ apptDate }}</a></li>
+        {{/each}}
+        </ul>
+
+        <a href="/nails/new">Create New Client Profile</a>
+
+    </div><!---service-one--->
+
+</section><!---End of Parent class-->
