@@ -61,12 +61,13 @@ hairRouter.post('/', (req, res) => {
 });
 
 hairRouter.put('/:hairId', (req, res) => {
+    console.log("I'm Here!")
     Hair.findByIdAndUpdate(req.params.hairId, req. body).then(hair => {
         res.redirect('/hairs');
     });
 });
 
-hairRouter.delete('/:hairsId', (req, res) => {
+hairRouter.delete('/:hairId', (req, res) => {
     Hair.findByIdAndDelete(req.params.hairId).then(() => {
         res.redirect('/hairs');
     });
