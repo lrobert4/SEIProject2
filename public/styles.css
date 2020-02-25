@@ -10,6 +10,11 @@ body {
 .bg-primary {
     background-image: url('images/banner-one.jpg');
     background-size: cover;
+    height: 355px;
     
+}
+
+.card-img-top {
+    height: 440px;
 }
 
