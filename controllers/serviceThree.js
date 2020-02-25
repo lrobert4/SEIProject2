@@ -36,21 +36,21 @@ nailsRouter.get('/new', (req, res) => {
     res.render('serviceThree/newServiceForm');
 });
 
-nailsRouter.get('/:issueId', (req, res) => {
-  Nails.findById(req.params.issueId).then(issue => {
-        res.render('issues/service', { issue });
+nailsRouter.get('/:nailId', (req, res) => {
+  Nails.findById(req.params.nailId).then(nail => {
+        res.render('issues/service', { nail });
     });
 });
 
 nailsRouter.get('/', (req, res) => {
-  Nails.find().then(issues => {
-        res.render('issues/services', { issues });
+  Nails.find().then(nails => {
+        res.render('issues/services', { nails });
     });
 });
 
-nailsRouter.get('/:issueId/edit', (req, res) => {
-  Nails.findById(req.params.issueId).then(issue => {
-        res.render('serviceThree/editServiceForm', { issue });
+nailsRouter.get('/:nailId/edit', (req, res) => {
+  Nails.findById(req.params.nailId).then(nail => {
+        res.render('serviceThree/editServiceForm', { nail });
     });
 });
 
@@ -60,14 +60,14 @@ nailsRouter.post('/', (req, res) => {
     });
 });
 
-nailsRouter.put('/:issueId', (req, res) => {
-  Nails.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
+nailsRouter.put('/:nailId', (req, res) => {
+  Nails.findByIdAndUpdate(req.params.nailId, req. body).then(nail => {
         res.redirect('/issues');
     });
 });
 
-nailsRouter.delete('/:issueId', (req, res) => {
-  Nails.findByIdAndDelete(req.params.issueId).then(() => {
+nailsRouter.delete('/:nailId', (req, res) => {
+  Nails.findByIdAndDelete(req.params.nailId).then(() => {
         res.redirect('/issues');
     });
 });
