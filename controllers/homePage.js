@@ -32,24 +32,24 @@ const makeupRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
+ /*
 makeupRouter.get('/new', (req, res) => {
     res.render('issues/newServiceForm');
 });
 
-// Client Profile
 makeupRouter.get('/:issueId', (req, res) => {
     Makeup.findById(req.params.issueId).then(issue => {
         res.render('issues/service', { issue });
     });
-});
+}); */
 
-//
 makeupRouter.get('/', (req, res) => {
     Makeup.find().then(issues => {
         res.render('homepage/index', { issues });
     });
 });
 
+/*
 makeupRouter.get('/:issueId/edit', (req, res) => {
     Makeup.findById(req.params.issueId).then(issue => {
         res.render('issues/editServiceForm', { issue });
@@ -58,21 +58,22 @@ makeupRouter.get('/:issueId/edit', (req, res) => {
 
 makeupRouter.post('/', (req, res) => {
     Makeup.create(req.body).then(() => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
 
 makeupRouter.put('/:issueId', (req, res) => {
     Makeup.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
 
 makeupRouter.delete('/:issueId', (req, res) => {
     Makeup.findByIdAndDelete(req.params.issueId).then(() => {
-        res.redirect('/index');
+        res.redirect('/issues');
     });
 });
+*/
 
 /* Step 6
  *

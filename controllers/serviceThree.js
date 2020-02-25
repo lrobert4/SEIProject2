@@ -38,13 +38,13 @@ nailsRouter.get('/new', (req, res) => {
 
 nailsRouter.get('/:nailId', (req, res) => {
   Nails.findById(req.params.nailId).then(nail => {
-        res.render('issues/service', { nail });
+        res.render('serviceThree/userProfile', { nail });
     });
 });
 
 nailsRouter.get('/', (req, res) => {
   Nails.find().then(nails => {
-        res.render('issues/services', { nails });
+        res.render('homepage/index', { nails });
     });
 });
 
@@ -56,19 +56,19 @@ nailsRouter.get('/:nailId/edit', (req, res) => {
 
 nailsRouter.post('/', (req, res) => {
   Nails.create(req.body).then(() => {
-        res.redirect('/issues');
+        res.redirect('homepage/index');
     });
 });
 
 nailsRouter.put('/:nailId', (req, res) => {
   Nails.findByIdAndUpdate(req.params.nailId, req. body).then(nail => {
-        res.redirect('/issues');
+        res.redirect('homepage/index');
     });
 });
 
 nailsRouter.delete('/:nailId', (req, res) => {
   Nails.findByIdAndDelete(req.params.nailId).then(() => {
-        res.redirect('/issues');
+        res.redirect('homepage/index');
     });
 });
 

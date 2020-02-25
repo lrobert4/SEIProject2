@@ -20,7 +20,7 @@ const methodOverride = require('method-override')
 const makeupRouter = require('./controllers/issue.js')
 const hairRouter = require('./controllers/serviceTwo.js')
 const nailsRouter = require('./controllers/serviceThree.js')
-
+const homePage = require('./controllers/homePage.js')
 
 
 /* Step 3
@@ -67,6 +67,8 @@ app.set('view engine', 'hbs')
 app.use('/issues', makeupRouter)
 app.use('/hair', hairRouter)
 app.use('/nails', nailsRouter)
+app.use('/index', homePage)
+
 
 /* Step 5
  *
