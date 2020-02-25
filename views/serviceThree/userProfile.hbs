@@ -6,11 +6,11 @@
     <p>{{ nail.notes }}</p>
     <p>{{ nail.nailType }}</p>
 
-    <a href="/index/{{ nail.id }}/edit">Edit Client Profile</a>
+    <a href="/nails/{{ nail.id }}/edit">Edit Client Profile</a>
 
-    <a href="/index">Back to Dashboard</a>
+    <a href="/nails">Back to Dashboard</a>
 
-    <form method="POST" action="/index/{{ nail.id }}?_method=DELETE">
+    <form method="POST" action="/nails/{{ nail.id }}?_method=DELETE">
         <input type="submit" value="Delete Client Profile"/>
     </form>
 </div>
