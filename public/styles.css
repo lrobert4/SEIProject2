@@ -18,3 +18,12 @@ body {
     height: 440px;
 }
 
+h1 {
+    text-align: center;
+
+}
+
+input {
+    width: 80%;
+}
+
