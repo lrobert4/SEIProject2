@@ -14,7 +14,7 @@ const mongoose = require('../db/connection.js')
  * TODO: create model schema 
  *
  */
-const Issue = new mongoose.Schema({
+const Makeup = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -46,4 +46,4 @@ const Issue = new mongoose.Schema({
  *
  * TODO: export the schema
  */
-module.exports = mongoose.model('Issue', Issue);
+module.exports = mongoose.model('Makeup', Makeup);

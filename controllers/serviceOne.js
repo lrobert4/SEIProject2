@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const Makeup = require('../models/issue.js')
+const Makeup = require('../models/serviceOne.js')
 
 /* Step 3 
  * 
@@ -33,44 +33,44 @@ const makeupRouter = express.Router()
  */
 
 makeupRouter.get('/new', (req, res) => {
-    res.render('issues/newServiceForm');
+    res.render('serviceOne/newServiceForm');
 });
 
 // Client Profile
-makeupRouter.get('/:issueId', (req, res) => {
-    Makeup.findById(req.params.issueId).then(issue => {
-        res.render('issues/service', { issue });
+makeupRouter.get('/:makeupId', (req, res) => {
+    Makeup.findById(req.params.makeupId).then(makeup => {
+        res.render('serviceOne/userProfile', { makeup });
     });
 });
 
 //
 makeupRouter.get('/', (req, res) => {
-    Makeup.find().then(issues => {
-        res.render('issues/services', { issues });
+    Makeup.find().then(makeups => {
+        res.render('serviceOne/clientList', { makeups });
     });
 });
 
-makeupRouter.get('/:issueId/edit', (req, res) => {
-    Makeup.findById(req.params.issueId).then(issue => {
-        res.render('issues/editServiceForm', { issue });
+makeupRouter.get('/:makeupId/edit', (req, res) => {
+    Makeup.findById(req.params.makeupId).then(makeup => {
+        res.render('serviceOne/editServiceForm', { makeup });
     });
 });
 
 makeupRouter.post('/', (req, res) => {
     Makeup.create(req.body).then(() => {
-        res.redirect('/issues');
+        res.redirect('/makeups');
     });
 });
 
-makeupRouter.put('/:issueId', (req, res) => {
-    Makeup.findByIdAndUpdate(req.params.issueId, req. body).then(issue => {
-        res.redirect('/issues');
+makeupRouter.put('/:makeupId', (req, res) => {
+    Makeup.findByIdAndUpdate(req.params.makeupId, req. body).then(makeup => {
+        res.redirect('/makeups');
     });
 });
 
-makeupRouter.delete('/:issueId', (req, res) => {
-    Makeup.findByIdAndDelete(req.params.issueId).then(() => {
-        res.redirect('/issues');
+makeupRouter.delete('/:makeupId', (req, res) => {
+    Makeup.findByIdAndDelete(req.params.makeupId).then(() => {
+        res.redirect('/makeups');
     });
 });
 
