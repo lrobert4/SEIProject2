@@ -66,6 +66,9 @@ app.set('view engine', 'hbs')
 app.use('/issues', makeupRouter)
 app.use('/hairs', hairRouter)
 app.use('/nails', nailsRouter)
+app.use('/', (req, res) => {
+    res.render('body.hbs');
+})
 
 
 /* Step 5
