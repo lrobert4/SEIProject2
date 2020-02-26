@@ -1,16 +1,16 @@
 <section class="parent">
+    <h1>Hair Client Profiles</h1>
     <div class="service-one">
 
-        <h1>Hair Client Profiles</h1>
         <ul>
         {{#each hairs }}
             <li><a href="/hairs/{{ id }}">{{ name }} {{ apptDate }}</a></li>
         {{/each}}
         </ul>
 
-        <a href="/hairs/new">Create New Client Profile</a> <br/>
-        <a href="/">Go Back To Dasboard</a>
-
     </div><!---service-one--->
+
+    <a href="/hairs/new" class="btn btn-primary">Create New Client Profile</a> <br/>
+    <a href="/" class="btn btn-primary">Go Back To Dasboard</a>
 
 </section><!---End of Parent class-->

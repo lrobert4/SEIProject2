@@ -18,4 +18,19 @@ body {
     height: 440px;
 }
 
+.parent {
+    display: grid;
+    grid-template-columns: 1140px;
+    justify-content: center;
+}
+
+.service-one {
+    display: flex;
+    justify-content: center;
+}
+
+.parent h1 {
+    text-align: center;
+}
+
 
