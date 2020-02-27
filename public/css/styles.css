@@ -51,6 +51,27 @@ form input {
     width: 100%;
 }
 
+h1 {
+    font-family: 'Abril Fatface';
+}
+
+h4 {
+    font-family: 'Abril Fatface';
+    font-size: 1.38rem !important;
+}
+
+.home-styles {
+    font-family: 'Abril Fatface';
+}
+
+.welcome {
+    color: white;
+}
+
+p {
+    font-family: 'Open Sans';
+}
+
 /*
 .btn-primary {
     width: 100%;
