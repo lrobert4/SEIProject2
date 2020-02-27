@@ -1,11 +1,15 @@
 <section class="parent">
 <h1>{{ hair.name }} Hair Profile</h1>
 <div class="issue-show-page">
-    
+    <h4>Phone Number:</h4>
     <p>{{ hair.phoneNum }}</p>
+    <h4>Email Address:</h4>
     <p>{{ hair.email }}</p>
+    <h4>Date Entered:</h4>
     <p>{{ hair.apptDate }}</p>
+    <h4>Enter Product Preferences:</h4>
     <p>{{ hair.notes }}</p>
+    <h4>Hair Type:</h4>
     <p>{{ hair.hairType }}</p>
 
     <a href="/hairs/{{ hair.id }}/edit" class="btn btn-dark button">Edit Client Profile</a>

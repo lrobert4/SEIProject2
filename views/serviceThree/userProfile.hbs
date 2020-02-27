@@ -1,11 +1,15 @@
 <section class="parent">
 <h1>{{ nail.name }} Nails Profile</h1>
 <div class="issue-show-page">
-    
+    <h4>Phone Number:</h4>
     <p>{{ nail.phoneNum }}</p>
+    <h4>Email Address:</h4>
     <p>{{ nail.email }}</p>
+    <h4>Date Entered:</h4>
     <p>{{ nail.apptDate }}</p>
+    <h4>Enter Product Preferences:</h4>
     <p>{{ nail.notes }}</p>
+    <h4>Nail Type:</h4>
     <p>{{ nail.nailType }}</p>
 
     <a href="/nails/{{ nail.id }}/edit" class="btn btn-dark button">Edit Client Profile</a>
