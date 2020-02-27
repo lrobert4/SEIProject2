@@ -7,3 +7,12 @@ Beauty professionals have the challenge of nuturing realtionships as well as con
 
 Clients who extend their loyalty to a beauty professional expect the same quality service they were impressed with, when they initially worked with them.
 
+## Wireframes 
+![alt text] (https://github.com/lrobert4/SEIProject2/blob/master/Wireframes-one.jpg)
+
+![alt text] (https://github.com/lrobert4/SEIProject2/blob/master/wireframes-two.jpg)
+
+## ERD Diagram
+![alt text] (https://github.com/lrobert4/SEIProject2/blob/master/ERD_Diagram.jpg)
+
+
