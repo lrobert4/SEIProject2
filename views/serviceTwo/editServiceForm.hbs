@@ -1,9 +1,7 @@
+<section class="parent">
+<h1>Update Hair Client Profile</h1>
 <form method="POST" action="/hairs/{{ hair.id }}?_method=PUT">
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  --->
     <input type="text" value="{{ hair.name }}" placeholder="Name" name="name"/><br/>
     <input type="text" value="{{ hair.phoneNum }}" placeholder="Phone Number" name="phoneNum"/><br/>
     <input type="text" value="{{ hair.email }}" placeholder="Email" name="email"/><br/>
@@ -11,5 +9,6 @@
     <input type="text" value="{{ hair.notes }}" placeholder="Client Notes" name="notes"/><br/>
     <input type="text" value="{{ hair.hairType }}" placeholder="hairType" name="hairType"/><br/>
 
-    <input type="submit" value="Update Client Profile"/>
+    <input class="btn btn-primary button" type="submit" value="Update Client Profile"/>
 </form>
+</section>
