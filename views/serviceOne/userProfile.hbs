@@ -8,12 +8,12 @@
     <p>{{ makeup.notes }}</p>
     <p>{{ makeup.skinType }}</p>
 
-    <a href="/makeups/{{ makeup.id }}/edit" class="btn btn-primary button">Edit Client Profile</a>
+    <a href="/makeups/{{ makeup.id }}/edit" class="btn btn-dark button">Edit Client Profile</a>
 
-    <a href="/makeups" class="btn btn-primary button">Back to Client Profiles</a>
+    <a href="/makeups" class="btn btn-dark button">Back to Client Profiles</a>
 
     <form method="POST" action="/makeups/{{ makeup.id }}?_method=DELETE">
-        <input class="btn btn-primary button" type="submit" value="Delete Client Profile"/>
+        <input class="btn btn-dark button" type="submit" value="Delete Client Profile"/>
     </form>
 </div>
 </section>
