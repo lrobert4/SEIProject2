@@ -7,6 +7,9 @@ Beauty professionals have the challenge of nuturing realtionships as well as con
 
 Clients who extend their loyalty to a beauty professional expect the same quality service they were impressed with, when they initially worked with them.
 
+## Heroku App Link (VIEW APP HERE)
+Live App Link: 
+
 ## Trello Project Board
 View Here: https://trello.com/b/al8oTzQP/sei26-project2-full-service-beauty-crm-app
 

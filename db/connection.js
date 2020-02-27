@@ -3,25 +3,21 @@
  */
 const mongoose = require('mongoose');
 
-/* Step 1.
- *
- * TODO: replace <db-name> with the name of your mongo database. 
- * This will need to change for every new project you create.
- *
- */
-const connectionString = process.env.MONGODB_URI || "mongodb://localhost/mehn-diagnostic-exercise";
-
-
-/* Step 2
- *
- * Open up a connection to the mongo database.
- *
- * NOTE: newUrlParser diables a deprecation warning
- */
-mongoose.connect(connectionString, { useNewUrlParser: true})
-  .then(() => {
-    console.log("connected to mongo at: " + connectionString);
-  });
+// Connect to database
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+}
+else {
+  mongoose.connect('mongodb://localhost/mehn-diagnostic-exercise');
+}
+mongoose.connection.on('error', function(err) {
+  console.error('MongoDB connection error: ' + err);
+  process.exit(-1);
+  }
+);
+mongoose.connection.once('open', function() {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 
 /* Export the mongoose object.
