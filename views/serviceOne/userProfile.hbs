@@ -1,16 +1,19 @@
+<section class="parent">
+<h1>{{ makeup.name }} Makeup Profile</h1>
 <div class="issue-show-page">
-    <h2>{{ makeup.name }} Makeup Profile</h2>
+    
     <p>{{ makeup.phoneNum }}</p>
     <p>{{ makeup.email }}</p>
     <p>{{ makeup.apptDate }}</p>
     <p>{{ makeup.notes }}</p>
     <p>{{ makeup.skinType }}</p>
 
-    <a href="/makeups/{{ makeup.id }}/edit">Edit Client Profile</a>
+    <a href="/makeups/{{ makeup.id }}/edit" class="btn btn-primary button">Edit Client Profile</a> <br/>
 
-    <a href="/makeups">Back to Client Profiles</a>
+    <a href="/makeups" class="btn btn-primary button">Back to Client Profiles</a>
 
     <form method="POST" action="/makeups/{{ makeup.id }}?_method=DELETE">
-        <input type="submit" value="Delete Client Profile"/>
+        <input class="btn btn-primary button" type="submit" value="Delete Client Profile"/>
     </form>
 </div>
+</section>

@@ -5,6 +5,7 @@ body {
 
 .issue-show-page {
     color: blue;
+    text-align: center;
 }
 
 .bg-primary {
@@ -47,5 +48,10 @@ form input {
 .btn-dark {
     width: 100%;
 }
+
+/*
+.btn-primary {
+    width: 100%;
+}*/
 
 
