@@ -8,9 +8,9 @@
     <p>{{ nail.notes }}</p>
     <p>{{ nail.nailType }}</p>
 
-    <a href="/nails/{{ nail.id }}/edit">Edit Client Profile</a>
+    <a href="/nails/{{ nail.id }}/edit" class="btn btn-dark button">Edit Client Profile</a>
 
-    <a href="/nails">Back to Client Profiles</a>
+    <a href="/nails" class="btn btn-dark button">Back to Client Profiles</a>
 
     <form method="POST" action="/nails/{{ nail.id }}?_method=DELETE">
         <input class="btn btn-dark button" type="submit" value="Delete Client Profile"/>
