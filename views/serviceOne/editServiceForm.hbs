@@ -1,12 +1,17 @@
 <section class="parent">
 <h1>Update Makeup Client Profile</h1>
 <form method="POST" action="/makeups/{{ makeup.id }}?_method=PUT">
-
+    <h4>Client Name:</h4>
     <input type="text" value="{{ makeup.name }}" placeholder="Name" name="name"/><br/>
+    <h4>Phone Number:</h4>
     <input type="text" value="{{ makeup.phoneNum }}" placeholder="Phone Number" name="phoneNum"/><br/>
+    <h4>Email Address:</h4>
     <input type="text" value="{{ makeup.email }}" placeholder="Email" name="email"/><br/>
+    <h4>Date Joined:</h4>
     <input type="text" value="{{ makeup.apptDate }}" placeholder="Appointment Date" name="apptDate"/><br/>
+    <h4>Enter Product Preferences:</h4>
     <input type="text" value="{{ makeup.notes }}" placeholder="Client Notes" name="notes"/><br/>
+    <h4>Skin Type:</h4>
     <input type="text" value="{{ makeup.skinType }}" placeholder="skinType" name="skinType"/><br/>
 
     <input class="btn btn-dark button" type="submit" value="Update Client Profile"/>
