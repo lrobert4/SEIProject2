@@ -2,15 +2,17 @@
 <h1>Create New Nails Client Profile</h1>
 
 <form method="POST" action="/nails">
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  --->
+    <h4>Client Name:</h4>
     <input type="text" placeholder="Name" name="name"/><br/>
+    <h4>Phone Number:</h4>
     <input type="text" placeholder="Phone Number" name="phoneNum"/><br/>
+    <h4>Email Address</h4>
     <input type="text" placeholder="Email Address" name="email"/><br/>
+    <h4>Date Joined:</h4>
     <input type="date" placeholder="Appointment Date" name="apptDate"/><br/>
+    <h4>Enter Product Preferences:</h4>
     <input type="text" placeholder="Client Notes" name="notes"/><br/>
+    <h4>Nail Type:</h4>
     <select name="nailType">
         <option value="Round">Round</option>
         <option value="Square">Square</option>
