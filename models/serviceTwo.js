@@ -38,7 +38,7 @@ const serviceTwo = new mongoose.Schema({
     hairType: {
         type: String,
         required: true,
-        enum: ['Straight', 'Mixed Chick', 'Afro-Textured'],
+        enum: ['Straight', 'Curly', 'Afro-Textured'],
     },
 })
 
