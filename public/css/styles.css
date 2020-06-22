@@ -85,4 +85,21 @@ p {
     width: 100%;
 }*/
 
+@media (min-width: 600px) and (max-width: 770px) {
+    .parent {
+        display: grid;
+        grid-template-columns: 600px;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 300px) and (max-width: 450px) {
+    .parent {
+        display: grid;
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+}
+
 
